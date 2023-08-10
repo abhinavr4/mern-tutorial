@@ -1,0 +1,27 @@
+{
+  "name": "mern-tutorial",
+  "version": "1.0.0",
+  "description": "## C0 Content 1) Setup an node project. 2) Create an express server. 3) Understanding GET and POST HTTP method examples with Postman. 4) Connect to MongoDB. 5) Structuring routes, middlewares, req & res handling.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinavr4/mern-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinavr4/mern-tutorial/issues"
+  },
+  "homepage": "https://github.com/abhinavr4/mern-tutorial#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

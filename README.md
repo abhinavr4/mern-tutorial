@@ -10,8 +10,15 @@ Content
 
 HW
 1) Implement PUT and DELETE methods.
-2) Dockerize the app.
 
 Reading
 1) package.json, lock files.
-2) Express docs.
+2) Express docs. https://expressjs.com/en/starter/hello-world.html
+
+## Steps to setup the project
+
+1) Install NVM or node.js
+2) Install and run mongoDB
+
+npm install
+npm run dev
