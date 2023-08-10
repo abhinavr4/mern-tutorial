@@ -47,7 +47,7 @@ router.post(
     res.json(dog);
   }
 );
-HW
+
 
 // PUT change name of dog by ID
 // /dogs/:id
