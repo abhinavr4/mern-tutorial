@@ -14,10 +14,16 @@ const Dog = mongoose.model("Dog");
     req.param.id
 */
 
-// GET route
+// GET dog details by name
 router.get("/", async (req, res) => {
   const name = req.query.name;
-  const dogs = await Dog.find({ name });
+  const dog = await Dog.find({ name });
+  res.json(dog);
+});
+
+// Get all dog details
+router.get("/all", async (req, res) => {
+  const dogs = await Dog.find();
   res.json(dogs);
 });
 
@@ -31,7 +37,7 @@ const checkName = (req, res, next) => {
 // router.use(checkName);
 // middleware
 
-// POST route
+// POST dog details
 router.post(
   "/",
   // checkName
@@ -48,11 +54,22 @@ router.post(
   }
 );
 
-
 // PUT change name of dog by ID
 // /dogs/:id
+router.put("/:id", async (req, res) => {
+  const id = req.params.id;
+  const dog = await Dog.findByIdAndUpdate(id, req.body, { new: true });
+  res.json(dog);
+});
 
 // DELETE dog by ID
 // /dogs/:id
+router.delete("/:id", async (req, res) => {
+  const id = req.params.id;
+  await Dog.findByIdAndDelete(id);
+  res.json({
+    message: "Dog details deleted!",
+  });
+});
 
 module.exports = router;
